@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "5c623901-e3a7-4ce0-bb05-e57f1b05f26d",
+		"name": "HW 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28307290"
+	},
+	"item": [
+		{
+			"name": "Get запрос",
+			"item": [
+				{
+					"name": "Get cakes first case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/cakes",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST запрос",
+			"item": [
+				{
+					"name": "Get cakes second case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/cakes",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cakes occasions second case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/occasions",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"occasions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cakes forWho second case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/forWho",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"forWho"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST cake second case",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"id\", function () {",
+									"var key = \"id\"",
+									"var value = pm.response.json().id",
+									"pm.collectionVariables.set(key, value);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"aндрей\", \"photoFileName\": \"https://s1.1zoom.ru/prev/530/Koenigsegg_2017_Agera_RS1_White_529233_600x400.jpg\", \"description\": \"its\", \"forWhoId\": 3, \"occasionId\": 2}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/cakes/add",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cakes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select of my new cake second case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}api/cakes/{{id}}",
+							"host": [
+								"{{BaseURL}}api"
+							],
+							"path": [
+								"cakes",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE запрос",
+			"item": [
+				{
+					"name": "Get all cakes third case",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/cakes",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cake third case",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}api/cakes/{{id}}",
+							"host": [
+								"{{BaseURL}}api"
+							],
+							"path": [
+								"cakes",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Проверка на удаление",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}api/cakes/{{id}}",
+							"host": [
+								"{{BaseURL}}api"
+							],
+							"path": [
+								"cakes",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://buy-cakes.herokuapp.com/"
+		},
+		{
+			"key": "newTitle",
+			"value": "заголовок",
+			"type": "string"
+		},
+		{
+			"key": "Text",
+			"value": "текст",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
